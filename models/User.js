@@ -12,7 +12,8 @@ const UserSchema = new Schema(
         email: {
             type: String,
             required: true,
-            unique: true 
+            unique: true,
+            match: /.+\@.+\..+/  //validates unique emails with mongoose
         },
         thoughts: [
             {
