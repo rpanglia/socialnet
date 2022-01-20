@@ -1,4 +1,4 @@
-# -- SOCIALNET --
+# -- SOCiALNET --
 
 ## Description
 
@@ -20,12 +20,31 @@ https://watch.screencastify.com/v/2kxkb9cRhHYFK5fq1c9m
 
 ## Breakdown
 
-Models:
-* User - username, email. thoughts, friends (friendCount virtual included to retrieve length of friends array)
-* Thought - thoughtText, createdAt, username, reactions (nested documents created with reactionSchema & reactionCount virtual included to retrieve length of reactions array)
-* Reaction - Schema only: reactionId, reactionBody, username, createdAt
+**Models:**
 
-API Routes:
+* User:
+    - `username`
+    - `email`
+    - `thoughts`
+    - `friends`
+    - `friendCount` virtual included to retrieve length of friends array
+
+* Thought: 
+    - `thoughtText`
+    - `createdAt`
+    - `username`
+    - `reactions`
+    - nested documents created with `reactionSchema`
+    - `reactionCount` virtual included to retrieve length of reactions array
+
+* Reaction (schema only):
+    - `reactionId`
+    - `reactionBody`
+    - `username`
+    - `createdAt`
+
+**API Routes:**
+
 `/api/users`
 - GET all users
 - GET a single user by id
